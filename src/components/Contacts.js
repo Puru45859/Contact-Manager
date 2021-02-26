@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import ContactForm from "./ContactForm";
 import firebaseDb from "../firebase";
 import swal from "sweetalert";
+import { UserConsumer } from "./userContext";
 
 const Contacts = () => {
   var [currentId, setCurrentId] = useState("");
   var [contactObjects, setContactObjects] = useState({});
 
-  //   Once components load complete
+  // Once components load complete
   useEffect(() => {
     firebaseDb.child("contacts").on("value", (snapshot) => {
       if (snapshot.val() != null) {
@@ -65,6 +66,11 @@ const Contacts = () => {
 
   return (
     <>
+      {/* <UserConsumer>
+        {(value) => {
+          return <div>Hello {value.fname}</div>;
+        }}
+      </UserConsumer> */}
       <div className="jumbotron jumbotron-fluid">
         <div className="container">
           <h4 className="display-4 text-center">Contact Manager</h4>
