@@ -18,11 +18,11 @@ function App() {
       <div className="row">
         <div className="col-md-8 offset-md-2">
           {/* <UserProvider value={state}> */}
-          {/* <Contacts></Contacts> */}
+          <Contacts></Contacts>
           {/* <CakeContainer /> */}
           {/* <HooksCakeContainer /> */}
           {/* <HooksIceCreamContainer /> */}
-          <UserContainer />
+          {/* <UserContainer /> */}
           {/* <HooksUserContainer /> */}
           {/* </UserProvider> */}
           {/* <Contacts></Contacts> */}
